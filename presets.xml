@@ -1,0 +1,567 @@
+<?xml version="1.0"?>
+<presets>
+        <MKV_VP8>
+            <label>MKV VP8</label>
+            <params>-crf 15.0 -f matroska -b:v 8000k -r 25 -vcodec libvpx -acodec aac -ar 48000 -b:a 192k -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -strict -2</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </MKV_VP8>
+        <MKV_VP9>
+            <label>MKV VP9</label>
+            <params>-crf 15.0 -f matroska -b:v 8000k -r 25 -vcodec libvpx-vp9 -acodec aac -ar 48000 -b:a 192k -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -strict -2</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </MKV_VP9>
+        <MKV_MPEG4>
+            <label>MKV MPEG4</label>
+            <params>-crf 15.0 -f matroska -b:v 8000k -r 25 -vcodec mpeg4 -acodec aac -ar 48000 -b:a 192k -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -strict -2</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </MKV_MPEG4>
+        <MKV_H265>
+            <label>MKV H265</label>
+            <params>-crf 15.0 -f matroska -b:v 8000k -r 25 -vcodec libx265 -acodec aac -ar 48000 -b:a 192k -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -strict -2</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </MKV_H265>
+        <MKV_Youtube>
+            <label>MKV optimized for Youtube</label>
+            <params>-c:v libx264 -preset slow -profile:v high -crf 18 -coder 1 -pix_fmt yuv420p -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 384k -profile:a aac_low</params>
+            <extension>mkv</extension>
+            <category>MKV</category>
+        </MKV_Youtube>
+        <AVIMSCompatible640x480>
+            <label>MS Compatible 640x480</label>
+            <params>-acodec libmp3lame -vcodec msmpeg4 -b:a 192k -b:v 1000k -s 640x480 -ar 44100</params>
+            <extension>avi</extension>
+            <category>AVI</category>
+        </AVIMSCompatible640x480>
+        <AVIMSCompatible720x480>
+            <label>MS Compatible 720x480</label>
+            <params>-acodec libmp3lame -vcodec msmpeg4 -b:a 192k -b:v 1000k -s 720x480 -ar 44100</params>
+            <extension>avi</extension>
+            <category>AVI</category>
+        </AVIMSCompatible720x480>
+        <AVIXVIDFullscreen>
+            <label>XVID Fullscreen 640x480 (4:3)</label>
+            <params>-f avi -r 29.97 -vcodec libxvid -vtag XVID -s 640x480 -aspect 4:3 -maxrate 1800k -b:v 1500k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -bf 2 -flags +4m -cmp 2 -subcmp 2 -g 300 -acodec libmp3lame -ar 48000 -b:a 128k -ac 2</params>
+            <extension>avi</extension>
+            <category>AVI</category>
+        </AVIXVIDFullscreen>
+        <AVIXVIDWidescreen>
+            <label>XVID Widescreen 704x384 (16:9)</label>
+            <params>-f avi -r 29.97 -vcodec libxvid -vtag XVID -s 704x384 -aspect 16:9 -maxrate 1800k -b:v 1500k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -bf 2 -flags +4m -cmp 2 -subcmp 2 -g 300 -acodec libmp3lame -ar 48000 -b:a 128k -ac 2</params>
+            <extension>avi</extension>
+            <category>AVI</category>
+        </AVIXVIDWidescreen>
+        <AVI_Youtube>
+            <label>AVI optimized for Youtube</label>
+            <params>-c:v libx264 -preset slow -profile:v high -crf 18 -coder 1 -pix_fmt yuv420p -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 384k -profile:a aac_low</params>
+            <extension>avi</extension>
+            <category>AVI</category>
+        </AVI_Youtube>
+        <DVDFullscreen>
+            <label>DVD Fullscreen 352x480 (4:3)</label>
+            <params>-f dvd -target ntsc-dvd -vcodec mpeg2video -r 29.97 -s 352x480 -aspect 4:3 -b:v 4000k -mbd rd -cmp 2 -subcmp 2 -acodec mp2 -b:a 192k -ar 48000 -ac 2</params>
+            <extension>mpg</extension>
+            <category>DVD</category>
+        </DVDFullscreen>
+        <DVDWidescreen>
+            <label>DVD Widescreen 352x480 (16:9)</label>
+            <params>-f dvd -target ntsc-dvd -vcodec mpeg2video -r 29.97 -s 352x480 -aspect 16:9 -b:v 4000k -mbd rd -cmp 2 -subcmp 2 -acodec mp2 -b:a 192k -ar 48000 -ac 2</params>
+            <extension>mpg</extension>
+            <category>DVD</category>
+        </DVDWidescreen>
+        <DVDFullscreenHighQuality>
+            <label>DVD Fullscreen 720x480 (4:3) High Quality</label>
+            <params>-f dvd -target ntsc-dvd -r 29.97 -s 720x480 -aspect 4:3 -b:v 8000k -mbd rd -cmp 0 -subcmp 2</params>
+            <extension>mpg</extension>
+            <category>DVD</category>
+        </DVDFullscreenHighQuality>
+        <DVDWidescreenHighQuality>
+            <label>DVD Widescreen 720x480 (16:9) High Quality</label>
+            <params>-f dvd -target ntsc-dvd -r 29.97 -s 720x480 -aspect 16:9 -b:v 8000k -g 12 -mbd rd -cmp 0 -subcmp 2</params>
+            <extension>mpg</extension>
+            <category>DVD</category>
+        </DVDWidescreenHighQuality>
+        <DVDLowQuality>
+            <label>DVD Low Quality 720x480</label>
+            <params>-f dvd -target ntsc-dvd -b:v 5000k -r 29.97 -s 720x480 -ar 48000 -b:a 384k</params>
+            <extension>mpg</extension>
+            <category>DVD</category>
+        </DVDLowQuality>
+        <FLVFullscreen>
+            <label>Flash Video (flv) for Web use Fullscreen</label>
+            <params>-vcodec flv -f flv -r 29.97 -aspect 4:3 -b:v 300k -g 160 -cmp dct  -subcmp dct  -mbd 2 -trellis 1 -ac 1 -ar 22050 -b:a 56k</params>
+            <extension>flv</extension>
+            <category>Websites</category>
+        </FLVFullscreen>
+        <FLVWidescreen>
+            <label>Flash Video (flv) for Web use Widescreen</label>
+            <params>-vcodec flv -f flv -r 29.97 -aspect 16:9 -b:v 300k -g 160 -cmp dct -subcmp dct -mbd 2 -trellis 1 -ac 1 -ar 22050 -b:a 56k</params>
+            <extension>flv</extension>
+            <category>Websites</category>
+        </FLVWidescreen>        
+        <MP4HighQuality>
+            <label>MP4 High Quality</label>
+            <params>-crf 35.0 -vcodec libx264 -acodec aac -ar 48000 -b:a 128k -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -strict -2</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4HighQuality>
+        <MP4VeryHighQuality>
+            <label>MP4 Very High Quality</label>
+            <params>-crf 25.0 -vcodec libx264 -acodec aac -ar 48000 -b:a 160k -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -strict -2</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4VeryHighQuality>
+        <MP4SuperHighQuality>
+            <label>MP4 Super High Quality</label>
+            <params>-crf 15.0 -vcodec libx264 -acodec aac -ar 48000 -b:a 192k -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -strict -2</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4SuperHighQuality>
+        <MP4Fullscreen>
+            <label>MP4 Fullscreen (4:3)</label>
+            <params>-f mp4 -r 29.97 -vcodec libx264 -s 640x480 -b:v 1000k -aspect 4:3 -flags +loop -cmp +chroma -maxrate 1500k -bufsize 4M -bt 256k -refs 1 -bf 3 -coder 1 -me_method umh -me_range 16 -subq 7 -partitions +parti4x4+parti8x8+partp8x8+partb8x8 -g 250 -keyint_min 25 -level 30 -qmin 10 -qmax 51 -qcomp 0.6 -sc_threshold 40 -i_qfactor 0.71 -acodec aac -b:a 112k -ar 48000 -ac 2 -strict -2</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4Fullscreen>
+        <MP4Widescreen>
+            <label>MP4 Widescreen (16:9)</label>
+            <params>-f mp4 -r 29.97 -vcodec libx264 -s 704x384 -b:v 1000k -aspect 16:9 -flags +loop -cmp +chroma -maxrate 1500k -bufsize 4M -bt 256k -refs 1 -bf 3 -coder 1 -me_method umh -me_range 16 -subq 7 -partitions +parti4x4+parti8x8+partp8x8+partb8x8 -g 250 -keyint_min 25 -level 30 -qmin 10 -qmax 51 -qcomp 0.6 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -acodec aac -b:a 112k -ar 48000 -ac 2 -strict -2</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4Widescreen>
+        <MP4_H265FullScreen>
+            <label>MP4 H.265 Fullscreen (4:3) High Compression</label>
+            <params>-c:v libx265 -preset medium -crf 28 -s 640x480 -c:a aac -b:a 128k -strict -2</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_H265FullScreen>
+        <MP4_H265Pantallapanoramica>
+            <label>MP4 H.265 Widescreen (16:9) High Compression</label>
+            <params>-c:v libx265 -preset medium -crf 28 -s 704x384 -c:a aac -b:a 128k -strict -2</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_H265Pantallapanoramica>
+        <MP4_H265NoResizing>
+            <label>MP4 H.265 Not Resizing High Compression</label>
+            <params>-c:v libx265 -preset medium -crf 28  -c:a aac -b:a 128k -strict -2</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_H265NoResizing>
+        <MP4_Youtube>
+            <label>MP4 optimized for Youtube</label>
+            <params>-c:v libx264 -preset slow -profile:v high -crf 18 -coder 1 -pix_fmt yuv420p -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 384k -profile:a aac_low</params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4_Youtube>
+        <VCDHighQuality>
+            <label>NTSC VCD High Quality</label>
+            <params>-f vcd -target ntsc-vcd -mbd rd -cmp 0 -subcmp 2</params>
+            <extension>mpg</extension>
+            <category>VCD</category>
+        </VCDHighQuality>
+        <PALVCDHighQuality>
+            <label>PAL VCD High Quality</label>
+            <params>-f vcd -target pal-vcd -mbd rd -trellis -mv0 -cmp 0 -subcmp 2</params>
+            <extension>mpg</extension>
+            <category>VCD</category>
+        </PALVCDHighQuality>
+        <WEBM_VP8_Fullscreen>
+            <label>WEBM VP8 Fullscreen (4:3)</label>
+            <params>-f webm -aspect 4:3 -vcodec libvpx -g 120 -level 216 -profile:v 0 -qmax 42 -qmin 10 -rc_buf_aggressivity 0.95 -vb 2M -acodec libvorbis -aq 90 -ac 2</params>
+            <extension>webm</extension>
+            <category>WEBM</category>
+        </WEBM_VP8_Fullscreen>
+        <WEBM_VP8_Widescreen>
+            <label>WEBM VP8 Widescreen (16:9)</label>
+            <params>-f webm -aspect 16:9 -vcodec libvpx -g 120 -level 216 -profile:v 0 -qmax 42 -qmin 10 -rc_buf_aggressivity 0.95 -vb 2M -acodec libvorbis -aq 90 -ac 2</params>
+            <extension>webm</extension>
+            <category>WEBM</category>
+        </WEBM_VP8_Widescreen>
+        <WEBM_VP9_Fullscreen>
+            <label>WEBM VP9 Fullscreen (4:3)</label>
+            <params>-f webm -aspect 4:3 -vcodec libvpx-vp9 -b:v 1M -acodec libvorbis</params>
+            <extension>webm</extension>
+            <category>WEBM</category>
+        </WEBM_VP9_Fullscreen>
+        <WEBM_VP9_Widescreen>
+            <label>WEBM VP9 Widescreen (16:9)</label>
+            <params>-f webm -aspect 16:9 -vcodec libvpx-vp9 -b:v 1M -acodec libvorbis</params>
+            <extension>webm</extension>
+            <category>WEBM</category>
+        </WEBM_VP9_Widescreen>
+        <WMVGeneric>
+            <label>WMV Generic</label>
+            <params>-vcodec wmv2 -acodec wmav2 -b:v 1000k -b:a 160k -r 25</params>
+            <extension>wmv</extension>
+            <category>WMV</category>
+        </WMVGeneric>
+        <WMV2BROADBAND>
+            <label>WMV for Web Use</label>
+            <params>-vcodec wmv2 -acodec wmav2 -b:v 640k -b:a 128k -r 29.97 -ac 2</params>
+            <extension>wmv</extension>
+            <category>WMV</category>
+        </WMV2BROADBAND>
+        <WMV2XBOX360>
+            <label>Xbox 360</label>
+            <params>-vcodec wmv2 -acodec wmav2 -b:v 1200k -b:a 160k -r 25 -ac 2</params>
+            <extension>wmv</extension>
+            <category>WMV</category>
+        </WMV2XBOX360>
+        <WMV2ZUNE>
+            <label>Zune</label>
+            <params>-vcodec wmv2 -acodec wmav2 -b:v 640k -b:a 128k -r 23.97 -ac 2</params>
+            <extension>wmv</extension>
+            <category>WMV</category>
+        </WMV2ZUNE>
+        <WMV4POWERPOINT>
+            <label>Power Point</label>
+            <params>-vcodec wmv2 -acodec wmav2 -aspect 4:3 -b:v 500k -b:a 32k -ac 1 -ar 22050 -ac 2</params>
+            <extension>wmv</extension>
+            <category>WMV</category>
+        </WMV4POWERPOINT>
+        <OGVGeneric>
+            <label>OGV Generic</label>
+            <params>-c:v libtheora -q:v 7 -c:a libvorbis -q:a 4</params>
+            <extension>ogv</extension>
+            <category>OGV</category>
+        </OGVGeneric>
+        <ExtractAudiomp3>
+            <label>Extract Audio mp3</label>
+            <params>-q:a 0 -map a -vn</params>
+            <extension>mp3</extension>
+            <category>MP3</category>
+        </ExtractAudiomp3>        
+        <Optimizedmp3>
+            <label>Optimized mp3</label>
+            <params>-c:a libmp3lame -joint_stereo 1 -abr 1 -b:a 128k -vn</params>
+            <extension>mp3</extension>
+            <category>MP3</category>
+        </Optimizedmp3>
+        <MP3GoodQualitykb>
+            <label>MP3 Good Quality (160 Kbps)</label>
+            <params>-acodec libmp3lame -ab 160k -ac 2 -ar 44100 -vn</params>
+            <extension>mp3</extension>
+            <category>MP3</category>
+        </MP3GoodQualitykb>
+        <MP3HighQualitykb>
+            <label>MP3 High Quality (192 Kbps)</label>
+            <params>-acodec libmp3lame -ab 192k -ac 2 -ar 44100 -vn</params>
+            <extension>mp3</extension>
+            <category>MP3</category>
+        </MP3HighQualitykb>
+        <MP3VBR>
+            <label>MP3 lame VBR-preset 2 (good-standard 170-210k)</label>
+            <params>-aq 2 -acodec libmp3lame -vn</params>
+            <extension>mp3</extension>
+            <category>MP3</category>
+        </MP3VBR>
+        <CopyExtractAudioAAC>
+            <label>Extract audio aac</label>
+            <params>-acodec copy</params>
+            <extension>m4a</extension>
+            <category>Scattered</category>
+        </CopyExtractAudioAAC>
+        <CopyExtractAudioToM4A>
+            <label>Extract audio stream and remux to m4a</label>
+            <params>-vn -acodec copy</params>
+            <extension>m4a</extension>
+            <category>Scattered</category>
+        </CopyExtractAudioToM4A>
+        <ogglibv>
+            <label>OGG (libvorbis)</label>
+            <params>-acodec libvorbis -vn -ac 2</params>
+            <extension>ogg</extension>
+            <category>Audio</category>
+        </ogglibv>
+        <oggmonolibv>
+            <label>OGG Mono (libvorbis)</label>
+            <params>-acodec libvorbis -vn -ac 1</params>
+            <extension>ogg</extension>
+            <category>Audio</category>
+        </oggmonolibv>
+        <flacAuto>
+            <label>Free Lossless Audio Codec - Auto</label>
+            <params>-acodec flac -vn</params>
+            <extension>flac</extension>
+            <category>Audio</category>
+        </flacAuto>
+        <ac3dvd192>
+            <label>Ac3 DVD - 192kbps Stereo</label>
+            <params>-f ac3 -acodec ac3 -ab 192kb -ar 48000 -ac 2</params>
+            <extension>ac3</extension>
+            <category>Audio</category>
+        </ac3dvd192>
+        <ac3dvd384>
+            <label>Ac3 DVD - 384kbps Stereo</label>
+            <params>-f ac3 -acodec ac3 -ab 384kb -ar 48000 -ac 2</params>
+            <extension>ac3</extension>
+            <category>Audio</category>
+        </ac3dvd384>
+        <aifAuto>
+            <label>Audio Interchange File - Auto</label>
+            <params>-vn</params>
+            <extension>aiff</extension>
+            <category>Audio</category>
+        </aifAuto>
+        <asfAuto>
+            <label>Active Streaming Format - Auto</label>
+            <params>-vcodec msmpeg4</params>
+            <extension>asf</extension>
+            <category>Websites</category>
+        </asfAuto>
+        <RealVideoVersion1>
+            <label>RealVideo 1.0</label>
+            <params>-ar 44100 -ab 128kb -vcodec rv10</params>
+            <extension>rm</extension>
+            <category>RealMedia</category>
+        </RealVideoVersion1>
+        <RealVideoVersion2>
+            <label>RealVideo 2.0</label>
+            <params>-ar 44100 -ab 128kb -vcodec rv20</params>
+            <extension>rm</extension>
+            <category>RealMedia</category>
+        </RealVideoVersion2>
+        <auAuto>
+            <label>Sun Audio - Auto</label>
+            <params>-vn</params>
+            <extension>au</extension>
+            <category>Audio</category>
+        </auAuto>
+        <mp2Auto>
+            <label>MPEG-1 Audio Layer II  - Auto</label>
+            <params>-acodec mp2 -vn</params>
+            <extension>mp2</extension>
+            <category>Audio</category>
+        </mp2Auto>   
+         <wma>
+             <label>WMA</label>
+             <params>-vn -acodec wmav2 -b:a 160k -ac 2</params>
+             <extension>wma</extension>
+             <category>Audio</category>
+         </wma>
+         <BlackberryCurvefs>
+             <label>Blackberry Curve Fullscreen</label>
+             <params>-f mp4 -vcodec mpeg4 -b:v 400k -r 24 -aspect 4:3 -acodec aac -ar 22050 -ac 2 -b:a 48k</params>
+             <extension>mp4</extension>
+             <category>Blackberry</category>
+          </BlackberryCurvefs>
+          <BlackberryCurvews>
+             <label>Blackberry Curve Widescreen</label>
+             <params>-f mp4 -vcodec mpeg4 -b:v 400k -r 24 -aspect 16:9 -acodec aac -ar 22050 -ac 2 -b:a 48k</params>
+             <extension>mp4</extension>
+             <category>Blackberry</category>
+          </BlackberryCurvews>
+          <CDWavStereo>
+             <label>Wav for CD</label>
+             <params>-vn -ar 44100</params>
+             <extension>wav</extension>
+             <category>Audio</category>
+          </CDWavStereo>
+          <GigabeatFS>
+              <label>RB Toshiba Gigabeat F/X</label>
+              <params>-acodec libmp3lame -b:a 128k -ar 44100 -vcodec mpeg2video -b:v 600k -strict -1</params>
+              <extension>mpg</extension>
+              <category>Rockbox</category>
+          </GigabeatFS>
+          <I5GFS>
+              <label>RB Apple iPod Video</label>
+              <params>-acodec libmp3lame -b:a 128k -ar 44100 -vcodec mpeg2video -b:v 400k -strict -1</params>
+              <extension>mpg</extension>
+              <category>Rockbox</category>
+          </I5GFS>
+          <M4a>
+              <label>MPEG4 Audio</label>
+              <params>-vn -acodec aac -b:a 112k -ac 2 -ar 48000</params>
+              <extension>m4a</extension>
+              <category>Audio</category>
+          </M4a>
+          <MP3GPmono>
+              <label>3GPP H.264 AAC mono</label>
+              <params>-r 15 -b:v 64k -ac 1 -ar 16000 -b:a 32k -acodec aac -vcodec libx264</params>
+              <extension>3gp</extension>
+              <category>Mobile Phones</category>
+          </MP3GPmono>
+          <MP3GPstereo>
+              <label>3GPP H.264 AAC stereo</label>
+              <params>-r 15 -b:v 128k -ar 22050 -b:a 64k -acodec aac -vcodec libx264 -preset medium -coder 1 -flags +loop -cmp chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1</params>
+              <extension>3gp</extension>
+              <category>Mobile Phones</category>
+          </MP3GPstereo>
+          <NeurosOSDTVHQNTSC>
+              <label>Neuros HQ NTSC Fullscreen</label>
+              <params>-f mp4 -r 29.97 -vcodec libxvid -aspect 4:3 -maxrate 2500k -b:v 2000k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -trellis 1 -flags +aic -cmp 2 -subcmp 2 -g 300 -acodec aac -ar 48000 -b:a 128k -ac 2</params>
+               <extension>mp4</extension>
+               <category>Neuros OSD</category>
+          </NeurosOSDTVHQNTSC>
+          <NeurosOSDTVHQPAL>
+               <label>Neuros HQ PAL Fullscreen</label>
+               <params>-f mp4 -r 25 -vcodec libxvid -aspect 4:3 -maxrate 2500k -b:v 2000k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -trellis 1 -flags +aic -cmp 2 -subcmp 2 -g 300 -acodec aac -ar 48000 -b:a 128k -ac 2</params>
+               <extension>mp4</extension>
+               <category>Neuros OSD</category>
+          </NeurosOSDTVHQPAL>
+          <NeurosOSDTVSFNTSC>
+               <label>Neuros Small File NTSC Fullscreen</label>
+               <params>-f mp4 -b:v 800k -r 29.97 -aspect 4:3 -vcodec libxvid -ar 48000 -b:a 80k -ac 2 -acodec aac</params>
+               <extension>mp4</extension>
+               <category>Neuros OSD</category>
+          </NeurosOSDTVSFNTSC>
+          <NeurosOSDTVSFPAL>
+               <label>Neuros Small File PAL Fullscreen</label>
+               <params>-f mp4 -b:v 800k -r 25 -aspect 4:3 -vcodec libxvid -ar 48000 -b:a 80k -ac 2 -acodec aac</params>
+               <extension>mp4</extension>
+               <category>Neuros OSD</category>
+          </NeurosOSDTVSFPAL>
+          <NeurosOSDTVWSHQNTSC>
+               <label>Neuros HQ NTSC Widescreen</label>
+               <params>-f mp4 -r 29.97 -vcodec libxvid -aspect 16:9 -maxrate 3000k -b:v 2500k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -bf 2 -trellis 1 -flags +aic -cmp 2 -subcmp 2 -g 300 -acodec aac -ar 48000 -b:a 128k -ac 2</params>
+               <extension>mp4</extension>
+               <category>Neuros OSD</category>
+          </NeurosOSDTVWSHQNTSC>
+          <NeurosOSDTVWSHQPAL>
+               <label>Neuros HQ PAL Widescreen</label>
+               <params>-f mp4 -r 25 -vcodec libxvid -aspect 16:9 -maxrate 3000k -b:v 2500k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -bf 2 -trellis 1 -flags +aic -cmp 2 -subcmp 2 -g 300 -acodec aac -ar 48000 -b:a 128k -ac 2</params>
+               <extension>mp4</extension>
+               <category>Neuros OSD</category>
+          </NeurosOSDTVWSHQPAL>
+          <NeurosOSDTVWSSFNTSC>
+               <label>Neuros Small File NTSC Widescreen</label>
+               <params>-f mp4 -b:v 800k -r 29.97 -aspect 16:9 -vcodec libxvid -ar 48000 -b:a 80k -ac 2 -acodec aac</params>
+               <extension>mp4</extension>
+               <category>Neuros OSD</category>
+          </NeurosOSDTVWSSFNTSC>
+          <NeurosOSDTVWSSFPAL>
+               <label>Neuros Small File PAL Widescreen</label>
+               <params>-f mp4 -b:v 800k -r 25 -aspect 16:9 -vcodec libxvid -ar 48000 -b:a 80k -ac 2 -acodec aac</params>
+               <extension>mp4</extension>
+               <category>Neuros OSD</category>
+          </NeurosOSDTVWSSFPAL>
+          <cdma3g>
+               <label>CDMA Phone Audio (3g2)</label>
+               <params>-f 3g2 -ar 22050 -b:a 128k -acodec aac -r 14.985 -vn</params>
+               <extension>3g2</extension>
+               <category>Mobile Phones</category>
+          </cdma3g>
+          <dvntsc>
+               <label>Raw DV for NTSC Fullscreen</label>
+               <params>-target ntsc-dv -aspect 4:3 -f dv</params>
+               <extension>dv</extension>
+               <category>DV</category>
+          </dvntsc>
+          <dvpal>
+               <label>Raw DV for PAL Fullscreen</label>
+               <params>-target pal-dv -aspect 4:3 -f dv</params>
+               <extension>dv</extension>
+               <category>DV</category>
+          </dvpal>
+          <ntscdvdgoodqFS>
+               <label>NTSC DVD Fullscreen</label>
+               <params>-f dvd -vcodec mpeg2video -r 30000/1001 -aspect 4:3 -b:v 4000k -mbd rd -trellis 1 -flags +mv0 -cmp 2 -subcmp 2 -acodec mp2 -b:a 192k -ar 48000 -ac 2</params>
+               <extension>mpg</extension>
+               <category>DVD</category>
+          </ntscdvdgoodqFS>
+          <ntscdvdgoodqWS>
+               <label>NTSC DVD Widescreen</label>
+               <params>-f dvd -vcodec mpeg2video -r 30000/1001 -aspect 16:9 -b:v 4000k -mbd rd -trellis 1 -flags +mv0 -cmp 2 -subcmp 2 -acodec mp2 -b:a 192k -ar 48000 -ac 2</params>
+               <extension>mpg</extension>
+               <category>DVD</category>
+          </ntscdvdgoodqWS>
+          <ntscdvdhqFS>
+               <label>NTSC DVD HQ Fullscreen</label>
+               <params>-f dvd -target ntsc-dvd -r 30000/1001 -aspect 4:3 -vb 8000k -mbd rd -trellis 1 -flags +mv0 -cmp 0 -subcmp 2</params>
+               <extension>mpg</extension>
+               <category>DVD</category>
+          </ntscdvdhqFS>
+          <ntscdvdhqWS>
+               <label>NTSC DVD HQ Widescreen</label>
+               <params>-f dvd -target ntsc-dvd -r 30000/1001 -aspect 16:9 -vb 8000k -g 12 -mbd rd -trellis 1 -flags +mv0 -cmp 0 -subcmp 2</params>
+               <extension>mpg</extension>
+               <category>DVD</category>
+          </ntscdvdhqWS>
+          <ntscdvdlq>
+               <label>NTSC DVD Fast (LQ)</label>
+               <params>-f dvd -target ntsc-dvd -b:v 5000k -r 30000/1001 -ar 48000 -b:a 384k</params>
+               <extension>mpg</extension>
+               <category>DVD</category>
+          </ntscdvdlq>
+          <ntscvcdhq>
+               <label>NTSC VCD (HQ)</label>
+               <params>-f vcd -target ntsc-vcd -mbd rd -trellis 1 -flags +mv0 -cmp 0 -subcmp 2</params>
+               <extension>mpg</extension>
+               <category>VCD</category>
+          </ntscvcdhq>
+          <paldvdgoodqFS>
+               <label>PAL DVD Fullscreen</label>
+               <params>-f dvd -vcodec mpeg2video -r 25.00 -aspect 4:3 -b:v 4000k -mbd rd -trellis 1 -flags +mv0 -cmp 2 -subcmp 2 -acodec mp2 -b:a 192k -ar 48000 -ac 2</params>
+               <extension>mpg</extension>
+               <category>DVD</category>
+          </paldvdgoodqFS>
+          <paldvdgoodqWS>
+               <label>PAL DVD Widescreen</label>
+               <params>-f dvd -vcodec mpeg2video -r 25.00 -aspect 16:9 -b:v 4000k -mbd rd -trellis 1 -flags +mv0 -cmp 2 -subcmp 2 -acodec mp2 -b:a 192k -ar 48000 -ac 2</params>
+               <extension>mpg</extension>
+               <category>DVD</category>
+          </paldvdgoodqWS>
+          <paldvdhqFS>
+               <label>PAL DVD HQ Fullscreen</label>
+               <params>-f dvd -target pal-dvd -aspect 4:3 -vb 8000k -mbd rd -trellis 1 -flags +mv0 -cmp 0 -subcmp 2</params>
+               <extension>mpg</extension>
+               <category>DVD</category>
+          </paldvdhqFS>
+          <paldvdhqWS>
+               <label>PAL DVD HQ Widescreen</label>
+               <params>-f dvd -target pal-dvd -aspect 16:9 -vb 8000k -mbd rd -trellis 1 -flags +mv0 -cmp 0 -subcmp 2</params>
+               <extension>mpg</extension>
+               <category>DVD</category>
+          </paldvdhqWS>
+          <paldvdlq>
+               <label>PAL DVD Fast (LQ)</label>
+               <params>-f dvd -target pal-dvd -b:v 5000k -r 25 -ar 48000 -b:a 384k</params>
+               <extension>mpg</extension>
+               <category>DVD</category>
+          </paldvdlq>
+          <palvcdhq>
+               <label>PAL VCD (HQ)</label>
+               <params>-f vcd -target pal-vcd -mbd rd -trellis 1 -flags +mv0 -cmp 0 -subcmp 2</params>
+               <extension>mpg</extension>
+               <category>VCD</category>
+          </palvcdhq>
+          <MOVGeneric>
+              <label>MOV Generic</label>
+              <params>-acodec aac -vcodec libx264 -f mov</params>
+              <extension>mov</extension>
+              <category>MOV</category>
+          </MOVGeneric>
+          <qmovhq>
+              <label>QuickTime H.264 video (High Quality)</label>
+              <params>-crf 35.0 -vcodec libx264 -preset slow -acodec aac -ar 48000 -b:a 128k -coder 1 -flags +loop -cmp chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1</params>
+              <extension>mov</extension>
+              <category>QuickTime</category>
+          </qmovhq>
+          <qmovshq>
+              <label>QuickTime H.264 video (Super High Quality)</label>
+              <params>-crf 15.0 -vcodec libx264 -preset veryslow -acodec aac -ar 48000 -b:a 192k -coder 1 -flags +loop -cmp chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1</params>
+              <extension>mov</extension>
+              <category>QuickTime</category>
+          </qmovshq>
+          <qmovvhq>
+              <label>QuickTime H.264 video (Very High Quality)</label>
+              <params>-crf 25.0 -vcodec libx264 -preset slower -acodec aac -ar 48000 -b:a 160k -coder 1 -flags +loop -cmp chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1</params>
+              <extension>mov</extension>
+              <category>QuickTime</category>
+          </qmovvhq>
+          <MOV_Youtube>
+              <label>MOV optimized for Youtube</label>
+              <params>-c:v libx264 -preset slow -profile:v high -crf 18 -coder 1 -pix_fmt yuv420p -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 384k -profile:a aac_low</params>
+              <extension>mov</extension>
+              <category>MOV</category>
+          </MOV_Youtube>
+
+
+
+
+
+
+</presets>

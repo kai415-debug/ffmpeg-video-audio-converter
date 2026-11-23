@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<ffmpeg-video-audio-converterConstants>
+  <!-- Options may contain an optional attribute "type" to indicate its data
+       type. Options without the type attributes are considered strings. -->
+
+  <!-- Whether the program is a portable application. This option only works if
+       the operating system is Microsoft Windows. If the program is in portable
+       mode, the settings file is written to
+          (ffmpeg-video-audio-converter Directory)/ffmpeg-video-audio-converter.ini.
+       Otherwise, it is written to
+          (Home Directory)/.ffmpeg-video-audio-converter/ffmpeg-video-audio-converter.ini. -->
+  <Portable type="boolean">false</Portable>
+
+  <!-- video file extensions used in the file open dialog -->
+  <VideoExtensions>
+     avi vfw divx mpg mpeg m1v m2v mpv dv 3gp mov mp4 m4v mqv dat vcd ogg ogm
+     ogv asf wmv bin iso vob mkv nsv ram flv rm swf ts rmvb dvr-ms m2t m2ts rec
+     mts webm dv
+  </VideoExtensions>
+
+  <!-- audio file extensions used in the file open dialog -->
+  <AudioExtensions>
+     mp3 m4a 3g2 ogg wav wma  ac3 ra ape flac opus
+  </AudioExtensions>
+
+  <!-- url pointing to the update info xml -->
+  <UpdateInfoUrl>https://ffmpeg-video-audio-converterapp.com/latest.xml</UpdateInfoUrl>
+
+  <!-- Whether to check for updates on program startup by default.
+       This value will be overridden by user settings. -->
+  <CheckUpdateOnStartup type="boolean">false</CheckUpdateOnStartup>
+
+  <!-- Start conversion immediately after adding files to the list.
+       This value will be overridden by user settings. -->
+  <AutoStartConversion type="boolean">false</AutoStartConversion>
+
+  <!-- default folder name to create when setting output path -->
+  <NewFolderName>ffmpeg-video-audio-converter_output</NewFolderName>
+
+  <!-- seconds to wait before shutting down or suspending the computer -->
+  <PoweroffTimeout type="integer">30</PoweroffTimeout>
+
+  <!-- entries of the main window toolbar separated by spaces
+       valid values (case insensitive):
+          AddFiles Options Exit
+          RemoveSelectedItems RemoveCompletedItems ClearList
+          OpenOutputFolder SetParameters ChangeOutputFilename
+          ChangeOutputDirectory ShowErrorMessage
+          StartConversion StopConversion Retry RetryAll Poweroff
+          AboutQt AboutFFmpeg About CheckUpdate
+       use "|" to represent a separator
+  -->
+  <ToolbarEntries>
+    AddFiles StartConversion StopConversion Retry RetryAll
+    | RemoveSelectedItems RemoveCompletedItems ClearList | OpenOutputFolder Poweroff
+  </ToolbarEntries>
+
+  <!-- number of recent paths to remember -->
+  <NumRecentPaths type="integer">5</NumRecentPaths>
+
+  <!-- the maximum allowable update info size in bytes, a value of 0 means unlimited
+       Warning: Setting this value to 0 may cause buffer overflow and compromise
+       the stability and security of your system.
+       Bytes exceeding the limit will be discarded. -->
+  <UpdateInfoSizeLimit type="integer">4096</UpdateInfoSizeLimit>
+
+  <!-- progressbar of the conversion list -->
+  <ProgressBar>
+    <Colors>
+      <Margin type="color">#556180</Margin>
+      <Center type="color">#55618f</Center>
+      <Border type="color">#fefefe</Border>
+      <Text type="color">#000000</Text>
+      <Background type="color">#fafafa</Background>
+    </Colors>
+  </ProgressBar>
+
+  <!-- time range selector in "Time" tab in conversion parameter dialog -->
+  <RangeSelector>
+    <!-- radius of the round edges -->
+    <RoundRectRadius type="float">3.0</RoundRectRadius>
+    <Colors>
+      <Container>
+        <BackgroundGradient1 type="color">#D2D2D2</BackgroundGradient1>
+        <BackgroundGradient2 type="color">#EBEBEB</BackgroundGradient2>
+        <OuterBorder type="color">#828282</OuterBorder>
+        <InnerBorder type="color">#FAFAFA</InnerBorder>
+      </Container>
+      <Range>
+        <BackgroundGradient1 type="color">#55618f</BackgroundGradient1>
+        <BackgroundGradient2 type="color">#556180</BackgroundGradient2>
+        <OuterBorder type="color">#556180</OuterBorder>
+        <InnerBorder type="color">#55618f</InnerBorder>
+      </Range>
+    </Colors>
+  </RangeSelector>
+
+  <!-- embedded media player -->
+  <MediaPlayer>
+    <!-- the default audio volume. valid values are integers between 0~100 -->
+    <DefaultVolume>50</DefaultVolume>
+    <!-- style of the media position slider -->
+    <SliderStyle>
+
+    QSlider::groove:horizontal {
+        border: 0px solid #999999;
+        height: 8px;
+        margin: -1px;
+        padding:0 6px;
+    }
+    QSlider::handle:horizontal {
+        background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #eeeeee stop:1 #eeeeee);
+        border: 1px solid #999999;
+        width: 16px;
+        margin: -5px;
+        box-shadow:0px 0px 3px #eeeeee;
+        border-radius: 8px;
+    }
+
+    QSlider::handle:horizontal:hover {
+        background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #556180 stop:1 #556180);
+        border: 1px solid #55618f;
+    }
+
+    QSlider::add-page:horizontal {
+        background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #b2b3b4, stop:1 #b2b3b4);
+        border: 1px solid #b2b3b4;
+        border-radius: 3px;
+        margin: 0px;
+    }
+    QSlider::sub-page:horizontal {
+        background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #55618f, stop:1 #556180 );
+        border: 1px solid #556180;
+        border-radius: 3px;
+        margin: 0px;
+    }
+    </SliderStyle>
+  </MediaPlayer>
+
+</ffmpeg-video-audio-converterConstants>

@@ -1,0 +1,15 @@
+--- ffmpeg-video-audio-converter.pro	2020-01-05 00:46:57.482150534 +0100
++++ patched-ffmpeg-video-audio-converter.pro	2020-01-06 09:30:52.769281003 +0100
+@@ -154,9 +154,9 @@ unix {
+     target.path = /usr/bin/
+     desktop.path = /usr/share/applications/
+     desktop.files += ffmpeg-video-audio-converter.desktop
+-    desktop.uninstall += rm ${INSTALL_ROOT}/usr/share/icons/ffmpeg-video-audio-converter.svg
+-    desktop.extra += mkdir -p ${INSTALL_ROOT}/usr/share/icons && \
+-                     cp icons/ffmpeg-video-audio-converter.svg ${INSTALL_ROOT}/usr/share/icons/ffmpeg-video-audio-converter.svg
++    desktop.uninstall += rm ${INSTALL_ROOT}/usr/share/icons/hicolor/scalable/apps/ffmpeg-video-audio-converter.svg
++    desktop.extra += mkdir -p ${INSTALL_ROOT}/usr/share/icons/hicolor/scalable/apps && \
++                     cp icons/ffmpeg-video-audio-converter.svg ${INSTALL_ROOT}/usr/share/icons/hicolor/scalable/apps/ffmpeg-video-audio-converter.svg
+     INSTALLS += target desktop
+ 
+ }

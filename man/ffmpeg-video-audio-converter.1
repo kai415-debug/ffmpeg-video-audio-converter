@@ -1,0 +1,39 @@
+.TH ffmpeg-video-audio-converter 1 "August 2019" "ffmpeg-video-audio-converter" "ffmpeg-video-audio-converter"
+
+.SH NAME
+ffmpeg-video-audio-converter \- A media converter GUI
+
+.SH SYNOPSIS
+.B ffmpeg-video-audio-converter
+[file1 [file2]] ...
+
+.SH DESCRIPTION
+ffmpeg-video-audio-converter is a GUI for FFmpeg [#ffmpeg]_, a command line media converter. FFmpeg
+can read audio and video files in various formats and convert them into other
+formats.  For example, you can convert video downloaded from the Internet into
+audio files for your mobile phone.
+
+ffmpeg-video-audio-converter comes with a set of predefined presets to help you quickly convert media
+files without having to know the details. These presets defines what arguments
+should be passed to *ffmpeg* for each output format. In case you want to adjust
+the details (bitrate, audio volume, etc.), ffmpeg-video-audio-converter lets you edit conversion
+parameters for each individual task.
+
+.SH OPTIONS
+.TP
+.B [file1 [file2]] ...
+Input files separated by spaces. These files can be any kind of media files
+that FFmpeg can decode.
+
+.SH SEE ALSO
+\fBffmpeg\fR(1), \fBffprobe\fR(1), \fBsox\fR(1)
+
+.SH AUTHOR
+.TP
+The author of ffmpeg-video-audio-converter is Maikel Llamaret Heredia <llamaret@webmisolutions.com>
+.TP
+The ffmpeg-video-audio-converter Name was created by Hugo Florentino <cre8or@gmx.net>
+
+.SH BUGS
+Please submit bugs to \fBhttps://github.com/swl-x/ffmpeg-video-audio-converter/issues\fR
+or \fBinfo@ffmpeg-video-audio-converterapp.com\fR

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2016-2017 Jean-Baptiste Kempf CC-0 -->
+<component type="desktop">
+  <id>ffmpeg-video-audio-converter.desktop</id>
+  <launchable type="desktop-id">ffmpeg-video-audio-converter.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>ffmpeg-video-audio-converter Video Converter</name>
+  <summary>Multimedia Video Converter</summary>
+  <name xml:lang="zh_TW">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="zh_CN">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="wa">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="uz">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="uk">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ug">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="tr">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="th">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="te">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ta">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="sv">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="sr">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="sl">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="sk">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="si">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ru">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ro">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="pt_PT">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="pt_BR">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="pl">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="pa">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="oc">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="nn">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="nl">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ne">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="nb">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ms">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="mn">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="mai">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="lv">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="lt">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ky">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ks_IN">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ko">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="kn">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="km">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="kk">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="kab">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ja">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="it">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="is">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="id">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="hy">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="hu">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="hr">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="hi">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="he">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="gu">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="gl">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="gd">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ga">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="fy">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="fr">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="fi">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="fa">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="eu">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="et">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="es_MX">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="es">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="el">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="de">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="da">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="cy">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="cs">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="co">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ca@valencia">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ca">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="bs">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="brx">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="br">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="bn">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="bn_IN">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="be">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ast">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="as_IN">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="ar">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="an">ffmpeg-video-audio-converter Video Converter</name>
+  <name xml:lang="af">ffmpeg-video-audio-converter Video Converter</name>
+  <summary>ffmpeg-video-audio-converter Video Converter, an open-source multimedia converter</summary>
+  <description>
+      <p>
+          ffmpeg-video-audio-converter is a GUI for FFmpeg, a powerful media converter. FFmpeg can read audio and video files in various formats and convert them into other formats. ffmpeg-video-audio-converter features an intuitive graphical interface and a rich set of presets to help you convert media files within a few clicks. Advanced users can also adjust conversion parameters in detail.
+      </p>
+  </description>
+  <url type="homepage">https://ffmpeg-video-audio-converterapp.com/</url>
+  <url type="bugtracker">https://github.com/swl-x/ffmpeg-video-audio-converter/issues</url>
+  <categories>
+      <category>AudioVideo</category>
+      <category>Audio</category>
+      <category>Video</category>
+      <category>Qt</category>
+  </categories>
+  <releases>
+    <release version="20.03.18"/>
+  </releases>
+  <project_group>SWL-X</project_group>
+  <project_license>GPL-3.0</project_license>
+  <developer_name>Maikel Llamaret Heredia</developer_name>
+  <update_contact>Maikel Llamaret Heredia -- llamaret@webmisolutions.com</update_contact>
+  <screenshots>
+    <screenshot type="default">https://ffmpeg-video-audio-converterapp.com/ffmpeg-video-audio-converter.png</screenshot>
+  </screenshots>
+</component>

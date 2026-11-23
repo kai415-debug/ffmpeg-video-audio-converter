@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>translations/ffmpeg-video-audio-converter_es.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_de.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_fr.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_it.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_sv.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_ja.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_pt.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_ru.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_pl.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_ar.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_cs_CZ.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_hu.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_ro.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_zh_CN.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_vi.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_tr.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_ru_RU.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_gl.qm</file>
+        <file>translations/ffmpeg-video-audio-converter_id.qm</file>
+    </qresource>
+</RCC>

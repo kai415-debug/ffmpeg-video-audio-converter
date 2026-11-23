@@ -1,0 +1,152 @@
+Requires:
+  - Qt5 >= 5.10
+  - ffmpeg >= 1.1.0
+  
+BuildRequires:
+  - pkgconfig
+  - libqt5-devel
+  - libqt5-linguist
+  - libqt5multimedia5
+  - libqt5declarative
+  - libqt5opengl5
+  - alsa-devel
+  - libX11-devel
+  - libnotify
+  
+depends=('ffmpeg' 'qt5-base' 'qtdeclarative5' 'qtmultimedia5' 'libqt5opengl5')
+optdepends=('sox: audio speed adjusting support'
+				'libnotify: display desktop notifications')  
+  
+To build, on Debian and derivated install:
+sudo apt install ffmpeg sox libnotify-dev qt5-default qtdeclarative5-dev qtmultimedia5-dev libqt5opengl5-dev qt5-qmake g++ make
+
+To run, on Debian and derivated install:
+sudo apt install libc6 ffmpeg qt5-default libqt5multimedia5-plugins libqt5opengl5 libqt5qml5 libqt5quickwidgets5 qml-module-qtquick2 qml-module-qtquick-dialogs qml-module-qtmultimedia libnotify-bin
+
+Compile:
+  - clone git repository: "git clone https://github.com/swl-x/ffmpeg-video-audio-converter.git"
+  - run "qmake ffmpeg-video-audio-converter.pro"
+  - run "make"
+  - run "sudo make install"
+  
+  
+If you want to use ffmpeg-video-audio-converter Video Converter from an alternative repository, without the need to compile, you can configure an alternative repository:
+
+
+### Arch Linux
+
+For Arch Linux, edit `/etc/pacman.conf` and add the following (the order of the repositories is important in pacman.conf, because pacman always downloads the first package it finds):
+
+[home_llamaret_Arch]
+SigLevel = Never
+Server = https://download.opensuse.org/repositories/home:/llamaret/Arch/$arch
+
+Then run the following as root
+
+pacman -Syu
+pacman -S home_llamaret_Arch / ffmpeg-video-audio-converter
+
+
+### Debian
+
+For Debian Unstable run the following as root:
+
+echo 'deb http://download.opensuse.org/repositories/home:/llamaret/Debian_Unstable/ /' > /etc/apt/sources.list.d/home:llamaret.list
+wget -nv https://download.opensuse.org/repositories/home:llamaret/Debian_Unstable/Release.key -O Release.key
+apt-key add - < Release.key
+apt-get update
+apt-get install ffmpeg-video-audio-converter
+
+For Debian Testing run the following as root:
+
+echo 'deb http://download.opensuse.org/repositories/home:/llamaret/Debian_Testing/ /' > /etc/apt/sources.list.d/home:llamaret.list
+wget -nv https://download.opensuse.org/repositories/home:llamaret/Debian_Testing/Release.key -O Release.key
+apt-key add - < Release.key
+apt-get update
+apt-get install ffmpeg-video-audio-converter
+
+For Debian Stable (10) run the following as root:
+
+echo 'deb http://download.opensuse.org/repositories/home:/llamaret/Debian_10/ /' > /etc/apt/sources.list.d/home:llamaret.list
+wget -nv https://download.opensuse.org/repositories/home:llamaret/Debian_10/Release.key -O Release.key
+apt-key add - < Release.key
+apt-get update
+apt-get install ffmpeg-video-audio-converter
+
+
+### MX Linux 19
+
+ffmpeg-video-audio-converter can be installed via the MX Package Manager (Currently under MX Test Repo Tab)
+
+Or with the Test Repo enabled (not recommended) run the following as root:
+apt-get update
+apt-get install ffmpeg-video-audio-converter
+
+
+### Ubuntu
+
+For Ubuntu 20.04 run the following:
+
+sudo sh -c "echo 'deb https://download.opensuse.org/repositories/home:/llamaret/xUbuntu_20.04/ /' > /etc/apt/sources.list.d/home:llamaret.list"
+wget -nv https://download.opensuse.org/repositories/home:/llamaret/xUbuntu_20.04/Release.key -O Release.key
+sudo apt-key add - < Release.key
+sudo apt-get update
+sudo apt-get install ffmpeg-video-audio-converter
+
+For Ubuntu 19.10 run the following:
+
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/llamaret/xUbuntu_19.10/ /' > /etc/apt/sources.list.d/home:llamaret.list"
+wget -nv https://download.opensuse.org/repositories/home:llamaret/xUbuntu_19.10/Release.key -O Release.key
+sudo apt-key add - < Release.key
+sudo apt-get update
+sudo apt-get install ffmpeg-video-audio-converter
+
+For Ubuntu 19.04 run the following:
+
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/llamaret/xUbuntu_19.04/ /' > /etc/apt/sources.list.d/home:llamaret.list"
+wget -nv https://download.opensuse.org/repositories/home:llamaret/xUbuntu_19.04/Release.key -O Release.key
+sudo apt-key add - < Release.key
+sudo apt-get update
+sudo apt-get install ffmpeg-video-audio-converter
+
+
+### Fedora
+
+For Fedora 31 run the following as root:
+
+dnf config-manager --add-repo https://download.opensuse.org/repositories/home:llamaret/Fedora_31/home:llamaret.repo
+dnf install ffmpeg-video-audio-converter
+
+For Fedora 30 run the following as root:
+
+dnf config-manager --add-repo https://download.opensuse.org/repositories/home:llamaret/Fedora_30/home:llamaret.repo
+dnf install ffmpeg-video-audio-converter
+
+
+### openSUSE
+
+For openSUSE Tumbleweed run the following as root:
+
+zypper addrepo https://download.opensuse.org/repositories/home:llamaret/openSUSE_Tumbleweed/home:llamaret.repo
+zypper refresh
+zypper install ffmpeg-video-audio-converter
+
+For openSUSE Leap 15.2 run the following as root:
+
+zypper addrepo https://download.opensuse.org/repositories/home:llamaret/openSUSE_Leap_15.2/home:llamaret.repo
+zypper refresh
+zypper install ffmpeg-video-audio-converter
+
+For openSUSE Leap 15.1 run the following as root:
+
+zypper addrepo https://download.opensuse.org/repositories/home:llamaret/openSUSE_Leap_15.1/home:llamaret.repo
+zypper refresh
+zypper install ffmpeg-video-audio-converter
+
+
+### How to run on MacOS
+
+-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+-brew install wget ffmpeg sox
+-wget http://download.qt.io/official_releases/qt-installer-framework/3.2.2/QtInstallerFramework-mac-x64.dmg
+-open ffmpeg-video-audio-converter

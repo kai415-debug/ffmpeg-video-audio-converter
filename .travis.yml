@@ -1,0 +1,56 @@
+# language target
+language: cpp
+compiler: gcc
+
+# main build matrix
+matrix:
+  include:
+    - name: "Bionic Ubuntu Linux"
+      os: linux
+      dist: bionic
+      sudo: required
+
+
+install:
+  - curl https://origin.archive.neon.kde.org/public.key | sudo apt-key add -
+  - echo "deb http://archive.neon.kde.org/user bionic main" | sudo tee -a /etc/apt/sources.list.d/neon.list
+  - sudo apt update -y
+  - sudo apt install -y build-essential g++ qt5-default libqt5opengl5-dev qtdeclarative5-dev qtmultimedia5-dev libqt5multimedia5-plugins libqt5qml5 libqt5quickwidgets5 qml-module-qtquick2 qml-module-qtquick-dialogs qml-module-qtmultimedia
+
+  # Install appimage-builder toolchain
+  - sudo apt install -y build-essential python3 python3-setuptools python3-pip patchelf gnupg2 file desktop-file-utils fakeroot
+  - sudo pip3 install git+https://github.com/AppImageCrafters/appimage-builder.git
+  
+  # Install appimagetool
+  - wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage -O /tmp/appimagetool
+  - chmod +x /tmp/appimagetool
+  - sudo mv /tmp/appimagetool /usr/bin
+  
+# build & test scripts
+script:
+ - qmake CONFIG+=release PREFIX=/usr ./ffmpeg-video-audio-converter.pro
+ - make -j$(nproc)
+ - INSTALL_ROOT=${PWD}/AppDir make install
+ - cp icons/ffmpeg-video-audio-converter.svg AppDir/usr/share/icons
+ - export VERSION="$TRAVIS_BRANCH-$(git describe --tags --exact-match HEAD 2> /dev/null)-$TRAVIS_BUILD_NUMBER"
+ - appimage-builder --skip-test
+
+# notifications (only via telegram)
+notifications:
+  email: true
+  #webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
+
+# make the AppImage bundle
+after_success:
+  # listing the result
+  - ls -lh *.AppImage
+  # get the tag version
+
+  - wget -c https://github.com/probonopd/uploadtool/raw/master/upload.sh
+  - export GITHUB_TOKEN="$OAUTHTOKEN"
+  - bash upload.sh ffmpeg-video-audio-converter*.AppImage*
+
+branches:
+  except:
+    - # Do not build tags that we create when we upload to GitHub Releases
+    - /^(?i:continuous.*)$/
